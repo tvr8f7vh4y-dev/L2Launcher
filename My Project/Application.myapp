@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyApplication xmlns="http://schemas.microsoft.com/developer/2004/01/myapp">
+  <MyType>WindowsFormsWithCustomSubMain</MyType>
+  <MySubMain>true</MySubMain>
+  <MainForm>frmMain</MainForm>
+  <SingleInstance>false</SingleInstance>
+  <ShutdownMode>AfterMainFormCloses</ShutdownMode>
+  <EnableVisualStyles>true</EnableVisualStyles>
+  <SaveMySettingsOnExit>false</SaveMySettingsOnExit>
+  <AuthenticationMode>Windows</AuthenticationMode>
+</MyApplication>
