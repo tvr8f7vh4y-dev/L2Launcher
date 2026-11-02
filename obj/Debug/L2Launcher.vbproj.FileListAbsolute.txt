@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\L2Launcher\bin\Debug\L2Launcher.exe
+C:\Users\Administrator\Desktop\L2Launcher\bin\Debug\L2Launcher.pdb
+C:\Users\Administrator\Desktop\L2Launcher\obj\Debug\L2Launcher.vbproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\L2Launcher\obj\Debug\L2Launcher.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\L2Launcher\obj\Debug\L2Launcher.exe
+C:\Users\Administrator\Desktop\L2Launcher\obj\Debug\L2Launcher.pdb
