@@ -3,7 +3,6 @@ Imports System.IO.Compression
 Imports System.Net
 Imports System.Security.Cryptography
 Imports System.Text.RegularExpressions
-Imports System.Drawing.Drawing2D
 
 Public Class frmMain
 
@@ -15,7 +14,7 @@ Public Class frmMain
     Public Shared gameServerIP As String = "127.0.0.1"
 
     ' -- Onde os arquivos de update estao hospedados (precisa da barra no fim)
-    Public Shared baseURL As String = "http://127.0.0.1/updater/"
+    Public Shared baseURL As String = "http://localhost:3000/updater/"
 
     ' -- Nome do servidor exibido no cartao
     Public Shared serverName As String = "PHOENIX"
@@ -25,7 +24,7 @@ Public Class frmMain
 
     ' -- Endereco da API que devolve players online e uptime (JSON)
     '    Esperado: {"players":531,"uptime":"408d 23h"}
-    Public Shared statusAPI As String = "http://127.0.0.1/api/status"
+    Public Shared statusAPI As String = "http://localhost:3000/api/status"
 
     ' -- Pasta do cliente com o L2.bin (system, system1, systemEU...)
     Public Shared clientFolder As String = "system1"
@@ -49,7 +48,7 @@ Public Class frmMain
 
     ' -- Banner de noticias dentro do launcher.
     Public Shared enableBrowser As Boolean = False
-    Public Shared browserURL As String = "http://127.0.0.1/news/"
+    Public Shared browserURL As String = "http://localhost:3000/news/"
 
     '###########################################################################
     '#  FIM DA CONFIGURACAO
@@ -363,7 +362,7 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub frmMain_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseUp
+    Private Sub frmMain_MouseUp(ByVal sender As Object, e As MouseEventArgs) Handles Me.MouseUp
         drag = False
     End Sub
 
