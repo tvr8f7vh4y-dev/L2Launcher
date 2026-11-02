@@ -3,6 +3,7 @@ Imports System.IO.Compression
 Imports System.Net
 Imports System.Security.Cryptography
 Imports System.Text.RegularExpressions
+Imports System.Drawing
 
 Public Class frmMain
 
@@ -86,6 +87,18 @@ Public Class frmMain
             End
         End If
 
+        '--- Artes (pasta images\ ao lado do executavel) ---
+        loadImage(picBackground, "bg.png")
+        loadImage(picCardImage, "card.png")
+        loadImage(picStart, "play.png")
+        loadImage(picClose, "close.png")
+        loadImage(picMinimize, "min.png")
+        loadImage(picDiscord, "discord.png")
+        loadImage(picWhatsApp, "whatsapp.png")
+        loadImage(picInstagram, "instagram.png")
+        loadImage(picFacebook, "facebook.png")
+        loadImage(picYouTube, "youtube.png")
+
         lblServerName.Text = serverName
         lblServerTagline.Text = serverTagline
         lblVersion.Text = "Version: " + My.Application.Info.Version.ToString()
@@ -139,6 +152,19 @@ Public Class frmMain
         Else
             lblStatus.Text = "Your game is up to date. You can now start the game."
         End If
+    End Sub
+
+    ''' <summary>Carrega uma imagem da pasta images\ (ignora se nao existir).</summary>
+    Private Sub loadImage(alvo As PictureBox, arquivo As String)
+        Try
+            Dim caminho As String = myStartupPath + "images\" + arquivo
+            If File.Exists(caminho) Then
+                Dim ms As New MemoryStream(File.ReadAllBytes(caminho))
+                alvo.Image = Image.FromStream(ms)
+            End If
+        Catch ex As Exception
+            'sem imagem: fica a cor de fundo
+        End Try
     End Sub
 
     ''' <summary>Le players online + uptime da API e atualiza o cartao.</summary>
@@ -362,7 +388,7 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub frmMain_MouseUp(ByVal sender As Object, e As MouseEventArgs) Handles Me.MouseUp
+    Private Sub frmMain_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseUp
         drag = False
     End Sub
 
